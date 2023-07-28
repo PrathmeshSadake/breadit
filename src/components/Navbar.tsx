@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Icons } from "./Icons";
 import { buttonVariants } from "./ui/Button";
+import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 
 const Navbar = () => {
   return (
@@ -12,9 +13,16 @@ const Navbar = () => {
             Breadit
           </p>
         </Link>
-        <Link href='/sign-in' className={buttonVariants()}>
-          Sign In
-        </Link>
+        <SignedIn>
+          {/* Mount the UserButton component */}
+          <UserButton afterSignOutUrl='/' />
+        </SignedIn>
+        <SignedOut>
+          {/* Signed out users get sign in button */}
+          <Link href='/sign-in' className={buttonVariants()}>
+            Sign In
+          </Link>
+        </SignedOut>
       </div>
     </div>
   );
