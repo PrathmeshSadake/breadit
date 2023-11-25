@@ -1,0 +1,18 @@
+{
+  "name": "breadit-backend",
+  "version": "1.0.0",
+  "description": "Ecommerce Website using MERN",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "author": "Prathmesh Sadake",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^8.0.1"
+  }
+}
