@@ -1,6 +1,6 @@
 "use client";
 
-import { useSupabase } from "@/app/supabase-provider";
+import { useSupabase } from "@/providers/supabase-provider";
 import {
   Card,
   CardContent,
